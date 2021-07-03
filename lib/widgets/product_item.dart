@@ -35,12 +35,13 @@ class ProductItem extends StatelessWidget {
               ),
             ),
             footer: GridTileBar(
-              backgroundColor: Colors.black87,
+              backgroundColor: Colors.black45,
+              // black87
               leading: IconButton(
                 icon: Icon(product.isFavorite
                     ? Icons.favorite
                     : Icons.favorite_border),
-                color: Theme.of(context).accentColor,
+                color: Colors.blueAccent,
                 onPressed: () {
                   product.toggleFavoriteStatus();
                 },
@@ -54,7 +55,7 @@ class ProductItem extends StatelessWidget {
                 onPressed: () {
                   cart.addItem(product.id, product.price, product.title);
                 },
-                color: Theme.of(context).accentColor,
+                color: Colors.blueAccent,
               ),
             ),
           )),
